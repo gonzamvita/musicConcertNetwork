@@ -3,9 +3,20 @@
     <%= @concert.band + " @ " + @concert.venue %>
   </h3>
   <p>
-    <%= "Where? " + @concert.city %><br>
-    <%= "When? " + @concert.date.strftime("%m/%d/%Y") %><br>
-    <%= "How much? " + @concert.price.to_s %> €<br>
-    <%= "Description: " + @concert.description%>
+    <strong>Where?</strong> <%= @concert.city %><br>
+    <strong>When?</strong> <%= @concert.date.strftime("%d/%m/%Y") %><br>
+    <strong>How much?</strong> <%= @concert.price.to_s %> €<br>
+    <strong>Description:</strong> <%= @concert.description %>
   </p>
 </article>
+
+<section>
+  <article class="comment">
+    <h3>Comments:</h3>
+    <% @concert.comments.each do |comment| %>
+        <blockquote>
+          <p><%= comment.text %></p>
+        </blockquote>
+    <% end %>
+  </article>
+</section>
