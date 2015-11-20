@@ -1,0 +1,9 @@
+<%= form_for [@concert, @comment] do |f| %>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+  <br>
+
+  <%= f.submit 'Save' %>
+<% end %>
+
+<%= link_to "Cancel", concert_path %>
