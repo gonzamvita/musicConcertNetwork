@@ -1,0 +1,16 @@
+<aside class="later_this_month">
+  <%= render 'laterthismonth' %>
+</aside>
+
+<article class="main_content">
+  <h1>What's happening today?</h1>
+
+  <ul>
+    <% @concerts.each do |concert| %>
+      <li>
+        <%= link_to "#{concert.band}", concert_path(concert.id)%>
+        <%= " on " + concert.venue + " at " + concert.city %>
+      </li>
+    <% end %>
+  </ul>
+</article>

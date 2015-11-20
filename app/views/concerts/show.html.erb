@@ -1,0 +1,11 @@
+<article class="concert_info">
+  <h3>
+    <%= @concert.band + " @ " + @concert.venue %>
+  </h3>
+  <p>
+    <%= "Where? " + @concert.city %><br>
+    <%= "When? " + @concert.date.strftime("%m/%d/%Y") %><br>
+    <%= "How much? " + @concert.price.to_s %> €<br>
+    <%= "Description: " + @concert.description%>
+  </p>
+</article>

@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+footer {
+  width: 40%;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  margin-left: 30%;
+ }
+
+header {
+  display: block;
+  top: 10px;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+ }
+
+.later_this_month {
+  display: block;
+  position: absolute;
+  padding: 100px 0px 0px 10px;
+}
+
+.main_content {
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.concert_info {
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 20px;
+}

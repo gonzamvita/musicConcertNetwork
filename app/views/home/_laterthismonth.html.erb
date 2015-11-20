@@ -1,0 +1,9 @@
+<h3>Later this month</h3>
+
+<ul>
+  <% @pastmonth.each do |show| %>
+    <li>
+      <%= show.band + " - " + show.city %>
+    </li>
+  <% end %>
+</ul>
