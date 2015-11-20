@@ -14,13 +14,25 @@
  *= require_self
  */
 
-footer {
+footer{
+  position: fixed;
+  bottom: 0px;
   width: 40%;
   text-align: center;
-  position: fixed;
-  bottom: 10px;
   margin-left: 30%;
- }
+  background-image: url("footer.png");
+  background-size: 100% 100%;
+}
+
+footer p{
+  color: white;
+  padding-top: 50px;
+}
+
+footer a:visited {
+  color: white;
+  padding-top: 50px;
+}
 
 header {
   display: block;

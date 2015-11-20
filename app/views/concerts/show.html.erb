@@ -10,13 +10,15 @@
   </p>
 </article>
 
-<section>
-  <article class="comment">
-    <h3>Comments:</h3>
-    <% @concert.comments.each do |comment| %>
-        <blockquote>
-          <p><%= comment.text %></p>
-        </blockquote>
-    <% end %>
-  </article>
-</section>
+<% if @concert.comments.any? %>
+  <section>
+    <article class="comment">
+      <h3>Comments:</h3>
+      <% @concert.comments.each do |comment| %>
+          <blockquote>
+            <p><%= comment.text %></p>
+          </blockquote>
+      <% end %>
+    </article>
+  </section>
+<% end %>
