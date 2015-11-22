@@ -3,7 +3,8 @@
 <ul>
   <% @pastmonth.each do |show| %>
     <li>
-      <%= show.band + " - " + show.city %>
+      <%= link_to "#{show.band}", {controller: 'concerts', action: 'show',id: show.id }%>
+      <%= " - " + show.city %>
     </li>
   <% end %>
 </ul>
