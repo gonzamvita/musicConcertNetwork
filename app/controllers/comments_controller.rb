@@ -1,8 +1,8 @@
 class CommentsController < ApplicationController
   def create
+    @concert = Concert.find(params[:concert_id])
     @comment = Comment.new(entry_params)
-
-    if @comment.save
+    if @concert.comments << @comment
       redirect_to :back
     else
       render 'home'
